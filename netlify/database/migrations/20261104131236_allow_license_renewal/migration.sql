@@ -1,0 +1,1 @@
+ALTER TABLE "saas_licenses" DROP CONSTRAINT "saas_licenses_claimed_by_key";

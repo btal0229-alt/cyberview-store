@@ -1,0 +1,8 @@
+{
+  "name": "سُفرة - منصة وتطبيق الأسر والمطابخ السحابية",
+  "description": "منصة وتطبيق متكامل لإدارة وعرض وجبات وطلبات الأسر المنتجة والمطابخ السحابية مع نظام SaaS متعدد المستأجرين",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
