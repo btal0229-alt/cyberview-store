@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: var(--border, #e5e7eb);
+  }
+  body {
+    font-family: 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@media print {
+  body:has(.order-invoice-overlay) > :not(.order-invoice-overlay) {
+    display: none !important;
+  }
+  .order-invoice-overlay {
+    position: static !important;
+    display: block !important;
+    overflow: visible !important;
+    background: white !important;
+    padding: 0 !important;
+  }
+  .order-invoice-overlay > div {
+    max-width: none !important;
+  }
+}
+
+/* إخفاء أي شارة أو عنصر تابع لمنصة Netlify يُحقن أسفل الصفحة */
+#netlify-badge,
+#nl-badge-frame,
+#nl-hud-frame,
+iframe[id^="nl-"],
+iframe[title*="Netlify"],
+.netlify-badge,
+a[href*="netlify.com"],
+a[href*="netlify.app"][target="_blank"],
+iframe[src*="netlify"],
+[id^="netlify-"],
+[class^="netlify-"],
+[class*=" netlify-"],
+[data-netlify-badge],
+netlify-drawer,
+netlify-toolbar {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
